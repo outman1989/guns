@@ -60,6 +60,7 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
             <exclusions>
+                <!--其他jar包中也存在slf4j-api，防止版本冲突，这里排除掉org.apache.shiro中的slf4j-api-->
                 <exclusion>
                     <artifactId>slf4j-api</artifactId>
                     <groupId>org.slf4j</groupId>

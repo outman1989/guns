@@ -22,8 +22,6 @@ public class GunsProperties {
 
     private Boolean kaptchaOpen = false;
 
-    private Boolean swaggerOpen = false;
-
     private String fileUploadPath;
 
     private Boolean haveCreatePath = false;
@@ -69,14 +67,6 @@ public class GunsProperties {
 
     public void setKaptchaOpen(Boolean kaptchaOpen) {
         this.kaptchaOpen = kaptchaOpen;
-    }
-
-    public Boolean getSwaggerOpen() {
-        return swaggerOpen;
-    }
-
-    public void setSwaggerOpen(Boolean swaggerOpen) {
-        this.swaggerOpen = swaggerOpen;
     }
 
     public Boolean getSpringSessionOpen() {

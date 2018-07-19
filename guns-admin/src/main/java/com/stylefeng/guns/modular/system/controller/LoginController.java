@@ -55,7 +55,6 @@ public class LoginController extends BaseController {
         }
         List<MenuNode> menus = menuService.getMenusByRoleIds(roleList);
         List<MenuNode> titles = MenuNode.buildTitle(menus);
-        titles = ApiMenuFilter.build(titles);
 
         model.addAttribute("titles", titles);
 
