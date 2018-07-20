@@ -14,14 +14,14 @@ var Quotation = {
 Quotation.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-            {title: '行情id', field: 'id', visible: true, align: 'center', valign: 'middle'},
-            {title: '猪源品类', field: 'productCategory', visible: true, align: 'center', valign: 'middle'},
-            {title: '猪源品种', field: 'productVariety', visible: true, align: 'center', valign: 'middle'},
-            {title: '价格', field: 'unitPrice', visible: true, align: 'center', valign: 'middle'},
-            {title: '所在省', field: 'province', visible: true, align: 'center', valign: 'middle'},
-            {title: '所在市', field: 'city', visible: true, align: 'center', valign: 'middle'},
-            {title: '所在县区', field: 'area', visible: true, align: 'center', valign: 'middle'},
-            {title: '行情日期', field: 'quotationDate', visible: true, align: 'center', valign: 'middle'}
+            {title: '行情id', field: 'id', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '猪源品类', field: 'productCategory', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '猪源品种', field: 'productVariety', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '价格', field: 'unitPrice', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '所在省', field: 'province', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '所在市', field: 'city', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '所在县区', field: 'area', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '行情日期', field: 'quotationDate', visible: true, align: 'center', valign: 'middle',sortable: true}
     ];
 };
 
