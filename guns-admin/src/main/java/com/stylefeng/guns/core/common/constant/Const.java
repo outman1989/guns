@@ -29,8 +29,8 @@ public interface Const {
     Integer ADMIN_ROLE_ID = 1;
 
     /**
-     * 接口文档的菜单名
+     * 记住用户的cookie 秘钥
      */
-    String API_MENU_NAME = "接口文档";
+    String REMEMBER_ME_KEY = "b3V0TWFuX011WWEhKSgqJg==";//    System.out.println(Base64.encodeToString("outMan_MuYa!)(*&".getBytes())); System.out.println(Base64.decode("b3V0TWFuX011WWEhKSgqJg==").length);
 
 }

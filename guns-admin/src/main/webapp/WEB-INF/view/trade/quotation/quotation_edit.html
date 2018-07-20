@@ -1,0 +1,33 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="行情id" value="${item.id}" underline="true"/>
+                            <#input id="productCategory" name="猪源品类" value="${item.productCategory}" underline="true"/>
+                            <#input id="productVariety" name="猪源品种" value="${item.productVariety}" underline="true"/>
+                            <#input id="unitPrice" name="价格" value="${item.unitPrice}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="province" name="所在省" value="${item.province}" underline="true"/>
+                            <#input id="city" name="所在市" value="${item.city}" underline="true"/>
+                            <#input id="area" name="所在县区" value="${item.area}" underline="true"/>
+                            <#input id="quotationDate" name="行情日期" value="${item.quotationDate}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="QuotationInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="QuotationInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/trade/quotation/quotation_info.js"></script>
+@}

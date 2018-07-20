@@ -1,6 +1,7 @@
 package com.stylefeng.guns.config.web;
 
 import com.stylefeng.guns.config.properties.GunsProperties;
+import com.stylefeng.guns.core.common.constant.Const;
 import com.stylefeng.guns.core.intercept.GunsUserFilter;
 import com.stylefeng.guns.core.shiro.ShiroDbRealm;
 import org.apache.shiro.cache.CacheManager;
@@ -102,7 +103,7 @@ public class ShiroConfig {
     @Bean
     public CookieRememberMeManager rememberMeManager(SimpleCookie rememberMeCookie) {
         CookieRememberMeManager manager = new CookieRememberMeManager();
-        manager.setCipherKey(Base64.decode("Z3VucwAAAAAAAAAAAAAAAA=="));
+        manager.setCipherKey(Base64.decode(Const.REMEMBER_ME_KEY));
         manager.setCookie(rememberMeCookie);
         return manager;
     }
@@ -157,10 +158,10 @@ public class ShiroConfig {
          * 顺序从上到下,优先级依次降低
          *
          */
-        Map<String, String> hashMap = new LinkedHashMap<>();
+        Map<String, String> hashMap = new LinkedHashMap<>();//有顺序的HashMap
         hashMap.put("/static/**", "anon");
         hashMap.put("/login", "anon");
-        hashMap.put("/global/sessionError", "anon");
+        hashMap.put("/global/sessionError", "anon");//错误页面
         hashMap.put("/kaptcha", "anon");
         hashMap.put("/**", "user");
         shiroFilter.setFilterChainDefinitionMap(hashMap);

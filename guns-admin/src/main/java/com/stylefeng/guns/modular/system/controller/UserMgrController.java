@@ -175,7 +175,7 @@ public class UserMgrController extends BaseController {
      */
     @RequestMapping("/add")
     @BussinessLog(value = "添加管理员", key = "account", dict = UserDict.class)
-    @Permission(Const.ADMIN_NAME)
+    @Permission(Const.ADMIN_NAME)//只有administrator角色可以访问
     @ResponseBody
     public Tip add(@Valid UserDto user, BindingResult result) {
         if (result.hasErrors()) {
